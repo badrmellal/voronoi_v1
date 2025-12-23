@@ -81,7 +81,6 @@ def apply_voronoi_to_frame(frame, max_points=200):
 def apply_voronoi_to_video(input_path, output_path, points=200):
     cap = load_video(input_path)
 
-    # Unpack tuple instead of accessing attributes like .height
     w, h, fps, frame_count = read_video_properties(cap)
 
     out = cv2.VideoWriter(output_path, cv2.VideoWriter_fourcc(*'mp4v'), fps, (w, h))
